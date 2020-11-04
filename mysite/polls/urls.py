@@ -8,7 +8,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     # ex: HOST/polls/5/
     # the 'name' value is called by the {% url %} template tag
-    path('<int:question_id>/', views.detail, name='detail'),
+    path('specific/<int:question_id>/', views.detail, name='detail'),
     # ex: HOST/polls/5/results/
     path('<int:question_id>/results/', views.results, name='results'),
     # ex: HOST/polls/5/vote/
